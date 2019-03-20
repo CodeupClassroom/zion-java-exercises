@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class HelloWorld {
     public static void main(String[] args) {
 //        Create an int variable named myFavoriteNumber and assign your favorite number to it, then print it out to the console.
@@ -92,5 +94,6 @@ public class HelloWorld {
         System.out.println(Byte.MAX_VALUE);
         System.out.println(Double.MIN_VALUE);
 //        Hint: Integer.MAX_VALUE is a class constant (we'll learn more about these later) that holds the maximum value for the int type.
+
     }
 }
