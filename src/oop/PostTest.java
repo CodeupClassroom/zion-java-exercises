@@ -9,11 +9,6 @@ public class PostTest {
                 2,
                 "Blah blah");
 
-
-        System.out.println(p.getThatTitle());
-        p.changeThatTitle("NEW TITLE");
-        System.out.println(p.getThatTitle());
-
     }
 
 
