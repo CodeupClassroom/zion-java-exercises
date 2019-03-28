@@ -2,7 +2,7 @@ package oop;
 
 import java.util.Date;
 
-public class Animal {
+ public class Animal {
     public String species;
     public Date birthdate;
 
@@ -10,8 +10,11 @@ public class Animal {
         this.birthdate = new Date();
     }
 
-    protected void goToBathroom() {
-        System.out.printf("Every body does it");
+    protected void goToBathroom(int number) {
+        if (number == 1)
+            System.out.printf("Every body does it");
+        else
+            System.out.printf("Yeah, sorry");
     }
 
     void run() {

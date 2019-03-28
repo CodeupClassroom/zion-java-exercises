@@ -1,6 +1,6 @@
 package oop;
 
-public class Cat extends Animal {
+ public class Cat extends Animal {
     public String name;
 
     public Cat() {
@@ -24,7 +24,7 @@ public class Cat extends Animal {
                 this.name, food);
     }
 
-    public void goToTheBathroom() {
+    protected void goToTheBathroom() {
         System.out.printf("%s uses the kitty litter box.",
                 this.name);
     }
@@ -35,13 +35,29 @@ public class Cat extends Animal {
         super.run();
     }
 
+    private void setName(String name) {
+        this.name = name;
+    }
+
     public static void main(String[] args) {
-        Cat cat = new Cat("Chewie");
-//        Cat cat = new Cat();
-//        cat.species = "cat";
-        cat.eat("catfood");
-        cat.purr();
-        cat.run();
+        final Cat cat = new Cat("Chewie");
+        Dog dog = new Dog();
+        dog.species = "dog";
+        Animal fish = new Animal();
+        fish.species = "fish";
+        Animal horse = new Animal();
+        horse.species = "horse";
+        cat.setName("Smudge");
+
+        Animal[] zoo = //new Animal[4];
+                {cat,dog,fish,horse};
+
+        for (Animal animal : zoo) {
+            animal.eat("food");
+        }
+//        cat.eat("catfood");
+
+//        cat.run();
 //        cat.goToBathroom();
 //        System.out.println(cat.birthdate);
     }
