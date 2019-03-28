@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class MoviesApplication {
 
     static Movie[] movies;
-    static Input input;
+    private static Input input;
 
     public static void viewAllMovies() {
 //        Movie[] movies = MoviesArray.findAll();
