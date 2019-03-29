@@ -1,6 +1,6 @@
 package oop;
 
-public class Programmer extends Employee {
+public class Programmer extends Employee {//} implements WritesCode, Printable{
 
     public Programmer(String name, String department) {
         super(name, department);
@@ -11,5 +11,14 @@ public class Programmer extends Employee {
     }
     public String work(String input) {
         return work();
+    }
+
+
+    public void print() {
+        System.out.println("Hello world");
+    }
+
+    public String code() {
+        return "sout(\"Hello world\")";
     }
 }

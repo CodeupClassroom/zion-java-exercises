@@ -2,7 +2,7 @@ package oop;
 
 import java.util.Date;
 
- public class Animal {
+ public class Animal  {
     public String species;
     public Date birthdate;
 

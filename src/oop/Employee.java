@@ -1,6 +1,6 @@
 package oop;
 
-public abstract class Employee {
+public abstract class Employee implements Printable {
     protected String name;
     protected String department;
     public Employee(String name, String department) {

@@ -1,11 +1,16 @@
 package oop;
 
-public class Person {
+public class Person implements Printable {
     public static long worldPopulation = 7_500_000_000L; // class property
     public String name;                                  // instance property
     public Person(String name) {
         this.name = name;
     }
+
+    public void print() {
+        System.out.printf("Hello, my name is %s%n", this.name);
+    }
+
     public static void main(String[] args) {
 
         Person theBestDrummerAlive = new Person("name");

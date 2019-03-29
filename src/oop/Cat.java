@@ -1,6 +1,6 @@
 package oop;
 
- public class Cat extends Animal {
+ public class Cat extends Animal implements Printable {
     public String name;
 
     public Cat() {
@@ -39,7 +39,12 @@ package oop;
         this.name = name;
     }
 
-    public static void main(String[] args) {
+
+     public void print() {
+         System.out.printf("Meow. I'm %s%n", this.name);
+     }
+
+     public static void main(String[] args) {
         final Cat cat = new Cat("Chewie");
         Dog dog = new Dog();
         dog.species = "dog";
