@@ -1,4 +1,7 @@
-import java.util.Arrays;
+import shapes.Shape;
+import shapes.Square;
+
+import java.util.*;
 
 public class ArraysLesson {
 
@@ -74,6 +77,7 @@ public class ArraysLesson {
                 {'p','p','p','p','p','p','p','p'},
                 {'r','n','b','q','k','b','n','r'}
         };
+
 
     }
 }
