@@ -13,9 +13,16 @@ public class Input {
     public String getString() {
         return sc.nextLine();
     }
+    @Deprecated
     public boolean yesNo() {
         String result = sc.nextLine();
 //        while (result.equals("")) result = sc.nextLine();
+        return result.equalsIgnoreCase("y") || result.equalsIgnoreCase("yes");
+    }
+    public boolean yesNo(boolean readUntilString) {
+        String result = sc.nextLine();
+        if (readUntilString)
+            while (result.equals("")) result = sc.nextLine();
         return result.equalsIgnoreCase("y") || result.equalsIgnoreCase("yes");
     }
     public int getInt() {
