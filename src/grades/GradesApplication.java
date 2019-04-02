@@ -1,12 +1,14 @@
 package grades;
 
+import util.Input;
+
 import java.util.HashMap;
 import java.util.Map;
 
 public class GradesApplication {
     static Map<String,Student> students;
 
-    public static void init() {
+    private static void init() {
         students = new HashMap<>();
         Student dwight = new Student("Dwight");
         dwight.addGrade(90);
@@ -35,7 +37,7 @@ public class GradesApplication {
         students.put("adrienVL", adrien);
 
     }
-    public static void welcome() {
+    private static void welcome() {
         System.out.printf("Welcome!\n");
         String usernames = "|";
         for (String key : students.keySet())
@@ -44,10 +46,36 @@ public class GradesApplication {
                 "Here are the github usernames of our students:\n" +
                 "\n" +
                 usernames);
+        System.out.println();
+    }
+    private static void outputStudentRecord(String key) {
+        // compare studentChoice with usernames
+        if (students.containsKey(key)) {
+            System.out.printf("Name: %s - Github Username: %s%n", students.get(key).getName(),key);
+            System.out.printf("Current Average: %.2f%n%n", students.get(key).getGradeAverage());
+            // output student record
+        } else {
+            System.out.printf("Sorry, no student found with the github username of \"%s\".%n", key);
+        }
+
     }
 
     public static void main(String[] args) {
+        Input input = new Input();
         init();
         welcome();
+        boolean keepGoing = true;
+
+        do {
+            System.out.println("What student would you like to see more information on?");
+            String studentChoice = input.getString();
+            System.out.println();
+
+            outputStudentRecord(studentChoice);
+
+            System.out.println("Would you like to see another student?");
+            keepGoing = input.yesNo();
+            System.out.println();
+        } while (keepGoing);
     }
 }

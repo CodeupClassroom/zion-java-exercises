@@ -14,7 +14,8 @@ public class Input {
         return sc.nextLine();
     }
     public boolean yesNo() {
-        String result = sc.next();
+        String result = sc.nextLine();
+//        while (result.equals("")) result = sc.nextLine();
         return result.equalsIgnoreCase("y") || result.equalsIgnoreCase("yes");
     }
     public int getInt() {
