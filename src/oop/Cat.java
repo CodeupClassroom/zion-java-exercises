@@ -19,10 +19,10 @@ package oop;
         System.out.printf("purrrrrrr\n");
     }
 
-    public void eat(String food) {
-        System.out.printf("Meow. %s eats the %s\n",
-                this.name, food);
-    }
+//    public void eat(String food) {
+//        System.out.printf("Meow. %s eats the %s\n",
+//                this.name, food);
+//    }
 
     protected void goToTheBathroom() {
         System.out.printf("%s uses the kitty litter box.",
@@ -39,6 +39,10 @@ package oop;
         this.name = name;
     }
 
+     //@Override
+     public void breathe() {
+        this.purr();
+     }
 
      public void print() {
          System.out.printf("Meow. I'm %s%n", this.name);

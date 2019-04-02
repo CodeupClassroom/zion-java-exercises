@@ -2,7 +2,8 @@ package oop;
 
 public class Child extends Parent {
 
-    public String getInheritedString() {
+    //@Override // Method does not override method from its superclass getInheritedString()
+    public String getInheritedString(String input) {
         return "Hello World";
     }
 
