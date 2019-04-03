@@ -1,6 +1,10 @@
 package oop;
 
- public class Cat extends Animal implements Printable {
+import util.Input;
+
+import javax.xml.transform.TransformerException;
+
+public class Cat extends Animal implements Printable {
     public String name;
 
     public Cat() {
@@ -64,6 +68,14 @@ package oop;
         for (Animal animal : zoo) {
             animal.eat("food");
         }
+
+        Input input = new Input();
+         System.out.println("Our cat needs to be weighed. How much does the cat weigh?");
+         try {
+             input.getDouble();
+         } catch (TransformerException te) {
+             // here we would deal with the exception
+         }
 //        cat.eat("catfood");
 
 //        cat.run();
