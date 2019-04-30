@@ -24,6 +24,15 @@ public class CollectionsPractice {
         friends.clear();
         System.out.println(friends);
 
+
+        List<Student> students = new ArrayList<>();
+        students.add(new Student("zion"));
+        // .....
+
+        String hello = "hello";
+
+
+
     }
 
 }
